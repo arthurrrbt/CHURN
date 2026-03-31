@@ -30,7 +30,7 @@ export async function POST(request: NextRequest) {
 
     // Recalculate risk for all customers
     const updated = await Promise.all(
-      customers.map((customer) => {
+      customers.map((customer: any) => {
         const riskResult = calculateChurnRisk({
           lastLoginDate: customer.lastLoginDate,
           loginsLast7Days: customer.loginsLast7Days,

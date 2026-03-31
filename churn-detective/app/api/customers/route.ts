@@ -41,7 +41,7 @@ export async function GET(request: NextRequest) {
     });
 
     // Parse JSON fields for response
-    const parsedCustomers = customers.map((c) => ({
+    const parsedCustomers = customers.map((c: any) => ({
       ...c,
       riskReasons: JSON.parse(c.riskReasons),
       suggestedActions: JSON.parse(c.suggestedActions),
