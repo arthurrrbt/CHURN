@@ -1,0 +1,8 @@
+customer_id,email,last_login_date,number_of_logins_last_7_days,number_of_logins_last_30_days,last_payment_date,payment_status
+1,alice@company.com,2025-03-29,4,18,2025-03-26,paid
+2,bob@company.com,2025-03-16,0,8,2025-03-11,paid
+3,charlie@company.com,,0,0,,pending
+4,diana@company.com,2025-02-24,0,1,2025-02-20,failed
+5,eva@company.com,2025-03-23,0,15,2025-03-21,paid
+6,frank@company.com,2025-03-30,6,20,2025-03-29,paid
+7,grace@company.com,2025-03-06,0,5,2025-03-01,canceled

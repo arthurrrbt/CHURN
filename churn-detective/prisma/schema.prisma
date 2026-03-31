@@ -1,0 +1,40 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id       String     @id @default(cuid())
+  email    String     @unique
+  customers Customer[]
+  createdAt DateTime  @default(now())
+}
+
+model Customer {
+  id                      String   @id @default(cuid())
+  userId                  String
+  user                    User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  email                   String
+  lastLoginDate           DateTime?
+  loginsLast7Days         Int      @default(0)
+  loginsLast30Days        Int      @default(0)
+  lastPaymentDate         DateTime?
+  paymentStatus           String   @default("pending") // pending, paid, failed, canceled
+  riskScore               Int      @default(0)
+  riskLevel               String   @default("Low") // Low, Medium, High
+  riskReasons             String   @default("[]") // JSON array stored as string
+  suggestedActions        String   @default("[]") // JSON array stored as string
+  createdAt               DateTime @default(now())
+  updatedAt               DateTime @updatedAt
+
+  @@unique([userId, email])
+  @@index([userId])
+  @@index([riskScore])
+}
