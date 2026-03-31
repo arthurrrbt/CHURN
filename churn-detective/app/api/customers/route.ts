@@ -24,23 +24,21 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    let query = {
-      where: {
-        userId: user.id,
-      },
-      orderBy: {
-        riskScore: "desc" as const,
-      },
+    // Build where clause
+    const whereClause: any = {
+      userId: user.id,
     };
 
     if (riskLevel && ["Low", "Medium", "High"].includes(riskLevel)) {
-      query.where = {
-        ...query.where,
-        riskLevel,
-      };
+      whereClause.riskLevel = riskLevel;
     }
 
-    const customers = await prisma.customer.findMany(query);
+    const customers = await prisma.customer.findMany({
+      where: whereClause,
+      orderBy: {
+        riskScore: "desc" as const,
+      },
+    });
 
     // Parse JSON fields for response
     const parsedCustomers = customers.map((c) => ({
