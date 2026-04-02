@@ -51,15 +51,15 @@ prisma/          # Database schema & seed
 
 ## Important Files
 
-- [CHURN_RULES.md](./CHURN_RULES.md) - Scoring rules & CSV format
-- [QUICKSTART.md](./QUICKSTART.md) - Setup guide
-- [ARCHITECTURE.md](./ARCHITECTURE.md) - Code overview
-- [TESTING.md](./TESTING.md) - How to test
-- [INTEGRATIONS.md](./INTEGRATIONS.md) - Future features
+- [CHURN_RULES.md](../CHURN_RULES.md) - Scoring rules & CSV format
+- [QUICKSTART.md](../QUICKSTART.md) - Setup guide
+- [ARCHITECTURE.md](../ARCHITECTURE.md) - Code overview
+- [TESTING.md](../TESTING.md) - How to test
+- [INTEGRATIONS.md](../INTEGRATIONS.md) - Future features
 
 ## Testing
 
-See [TESTING.md](./TESTING.md) for manual test workflow.
+See [TESTING.md](../TESTING.md) for manual test workflow.
 
 ## Tech Stack
 
@@ -128,4 +128,4 @@ npm run seed
 
 **Ready to use!** 🚀
 
-See [QUICKSTART.md](./QUICKSTART.md) for detailed walkthrough.
+See [QUICKSTART.md](../QUICKSTART.md) for detailed walkthrough.
