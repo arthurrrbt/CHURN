@@ -1,6 +1,4 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": ".next",
   "env": {
     "DATABASE_URL": "@churn_database_url"
   }
