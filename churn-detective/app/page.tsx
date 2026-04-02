@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { TrendingUp, AlertCircle, Zap, BarChart3, Check, Sparkles } from "lucide-react";
+import { TrendingUp, AlertCircle, Zap, Check, Sparkles } from "lucide-react";
 export default function LandingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-black text-white">
@@ -55,7 +55,7 @@ export default function LandingPage() {
             </a>
           </div>
           <p className="text-sm text-slate-400 pt-4">
-            ?? No credit card required • ? Results in minutes • ?? Secure & private
+            ?? No credit card required ï¿½ ? Results in minutes ï¿½ ?? Secure & private
           </p>
         </div>
       </section>
