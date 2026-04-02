@@ -18,7 +18,8 @@
     "next": "^16.2.0",
     "@prisma/client": "^6.4.0",
     "papaparse": "^5.4.1",
-    "lucide-react": "^0.408.0"
+    "lucide-react": "^0.408.0",
+    "framer-motion": "^11.0.0"
   },
   "devDependencies": {
     "typescript": "^5.7.0",
