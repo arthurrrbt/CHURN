@@ -1,7 +1,9 @@
 "use client";
+
 import Link from "next/link";
 import { TrendingUp, AlertCircle, Zap, Check, Sparkles } from "lucide-react";
 export default function LandingPage() {
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-black text-white">
       {/* Navigation */}
@@ -199,6 +201,24 @@ export default function LandingPage() {
           <p>&copy; 2026 Churn Detective. Built for SaaS founders by SaaS founders.</p>
         </div>
       </footer>
+
+      {/* Animations */}
+      <style jsx>{`
+        @keyframes fade-in {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .animate-fade-in {
+          animation: fade-in 0.8s ease-out;
+        }
+      `}</style>
     </div>
   );
 }
