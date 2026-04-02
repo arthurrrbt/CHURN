@@ -1,11 +1,9 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import { TrendingUp, AlertCircle, Zap, BarChart3, Shield, RefreshCw } from "lucide-react";
 
 export default function LandingPage() {
-  const [scrolled, setScrolled] = useState(false);
 
   return (
     <div className="min-h-screen bg-white">
@@ -187,39 +185,6 @@ export default function LandingPage() {
           animation: fade-in 0.8s ease-out;
         }
       `}</style>
-    </div>
-  );
-}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Email
-              </label>
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="your@email.com"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
-                required
-              />
-            </div>
-
-            {error && <p className="text-red-600 text-sm">{error}</p>}
-
-            <button
-              type="submit"
-              disabled={loading}
-              className="w-full btn-primary disabled:opacity-50"
-            >
-              {loading ? "Loading..." : "Sign In"}
-            </button>
-          </form>
-
-          <p className="text-gray-600 text-xs text-center mt-6">
-            Using demo auth. In production, use magic links or OAuth.
-          </p>
-        </div>
-      </div>
     </div>
   );
 }
